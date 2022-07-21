@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "Open Sans Bold";
+    src: url("fonts/OpenSansCondensed-Bold.woff2") format("woff2"),
+    url("fonts/OpenSansCondensed-Bold.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("fonts/OpenSans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    background-color: #232321;
+}
+html {
+    min-height: 100%;
+
+    background: #232321;
+}
+
+main {
+    position: relative;
+}
+
+.content-box-component {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.hidden {
+    display: none;
+}
+
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+html.inline-element {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+.container {
+    max-width: 1360px;
+    margin: 0 auto;
+}
