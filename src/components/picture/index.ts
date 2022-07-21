@@ -1,0 +1,1 @@
+export {markupPicture} from './markupPicture'

@@ -1,0 +1,43 @@
+.img-filters {
+    padding: 20px 0;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.filters {
+    padding: 15px 0;
+
+    text-align: center;
+}
+
+.filters-item {
+    padding: 0 16px;
+
+    font-size: 18px;
+    line-height: 30px;
+    text-decoration: underline;
+
+    cursor: pointer;
+}
+
+.filters-radio {
+    width: 100%;
+    visibility: hidden;
+    position: absolute;
+    right: -100px;
+    left: -100px;
+}
+
+.filters-radio:checked + .filters-item {
+    color: #000000;
+    text-decoration: none;
+
+    background: #ffffff;
+    border-radius: 2px;
+}

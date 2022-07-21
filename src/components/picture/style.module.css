@@ -1,0 +1,131 @@
+.pictures {
+    padding-bottom: 120px;
+    padding-left: 12px;
+
+    font-size: 0;
+    text-align: left;
+}
+
+.pictures-loading:after,
+.pictures-failure:after {
+    position: absolute;
+    top: 260px;
+    left: 50%;
+    z-index: 2;
+
+    box-sizing: border-box;
+    width: 200px;
+    margin-left: -100px;
+    padding: 20px;
+
+    font-size: 30px;
+    text-align: center;
+    color: #ffffff;
+
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.pictures-loading:after {
+    content: "Загрузка...";
+}
+
+.pictures-failure:after {
+    content: "Ошибка загрузки";
+}
+
+
+.picture {
+    position: relative;
+
+    display: inline-block;
+    box-sizing: border-box;
+    width: 182px;
+    height: 182px;
+    margin-right: 11px;
+    margin-bottom: 14px;
+    overflow: hidden;
+
+    text-align: center;
+}
+
+.picture img {
+    height: 182px;
+    margin-bottom: -34px;
+
+    border: 0;
+}
+
+.picture-load-failure {
+    line-height: 182px;
+
+    background: url("../../img/icon-cross.png") no-repeat center;
+    border: solid 1px rgba(255, 255, 255, 0.2);
+    opacity: 0.3;
+}
+
+.picture-load-failure img {
+    display: none;
+    width: 182px;
+    height: 182px;
+}
+
+.picture-stats {
+    display: none;
+    padding: 0 10px;
+
+    line-height: 24px;
+    color: #ffffff;
+
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+}
+
+.picture:hover .picture-stats {
+    display: inline-block;
+}
+
+.picture-load-failure .picture-stats {
+    position: relative;
+    top: -12px;
+
+    line-height: 1.3;
+    vertical-align: bottom;
+}
+
+.picture-stat {
+    position: relative;
+
+    margin: 0 5px;
+
+    font-weight: bold;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.picture-stat:before {
+    content: "";
+    position: relative;
+    top: -1px;
+
+    display: inline-block;
+    margin: 0 2px;
+
+    vertical-align: middle;
+
+    background: url("../../img/image-icons-sprite.png") no-repeat 0 0;
+}
+
+.picture-comments:before {
+    width: 20px;
+    height: 16px;
+
+    background-position: 0 0;
+}
+
+.picture-likes:before {
+    width: 19px;
+    height: 15px;
+
+    background-position: -21px 0;
+}
