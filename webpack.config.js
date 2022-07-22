@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
 	mode: 'development',
-	entry: './src/app.ts',
+	entry:  './src/app.ts',
 	devtool: 'inline-source-map',
 	devServer: {
 		static: './dist',
@@ -13,6 +13,7 @@ module.exports = {
 		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, 'dist'),
 		clean: true,
+		assetModuleFilename: 'assets/[hash][ext][query]'
 	},
 
 	plugins: [
@@ -24,21 +25,35 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.tsx?$/,
+				test: /\.ts$/,
 				use: 'ts-loader',
-				exclude: /node_modules/,
+				exclude: /node_modules|\.d\.ts$/,
+			},
+			{
+				test: /\.d\.ts$/,
+				loader: 'ignore-loader'
 			},
 			{
 				test: /\.css$/i,
 				use: ['style-loader', 'css-loader'],
 			},
 			{
+				test: /\.html$/i,
+				loader: "html-loader",
+			},
+			{
 				test: /\.(png|svg|jpg|jpeg|gif)$/i,
 				type: 'asset/resource',
+				generator: {
+					filename: 'img/[hash][ext][query]'
+				}
 			},
 			{
 				test: /\.(woff|woff2|eot|ttf|otf)$/i,
 				type: 'asset/resource',
+				generator: {
+					filename: 'assets/fonts/[hash][ext][query]'
+				}
 			},
 		],
 	},

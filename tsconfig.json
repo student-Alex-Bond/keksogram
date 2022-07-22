@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noEmit": false,
+    "noImplicitAny": true,
+    "module": "commonjs",                     /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
+    "lib": [                                  /* Specify library files to be included in the compilation. */
+      "esnext",
+      "dom"
+    ],
+    "target": "es5",
+    "allowJs": true,
+    "moduleResolution": "node"
+  }
+}
