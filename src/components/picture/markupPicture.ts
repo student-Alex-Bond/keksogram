@@ -1,6 +1,6 @@
 import style from './style.module.css'
 
-export const markupPicture = (commentsCount: number, likesCount: number, url: string) => {
+export const markupPicture = (commentsCount: number, likesCount: number, url: string): string => {
   let src = require(`../../${url}`)
   return ` 
     <a href="#" class="${style['picture']}">

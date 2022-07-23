@@ -1,7 +1,7 @@
 import style from './style.module.css'
 const logo =  require('../../img/ha-logo.png')
 
-export const markupFooter = () => {
+export const markupFooter = ():string => {
   return `<footer class="${style['footer']} container">
   <div class="${style['center-wrapper']}">
     <section class="${style['footer-logo']}">
